@@ -1,0 +1,9 @@
+type Query {
+    reportById(report_id: ID): Report
+}
+
+type Report {
+    report_id: ID
+    company_name: String
+    company_balance: Int
+}
