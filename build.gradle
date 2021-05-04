@@ -18,13 +18,16 @@ bootJar {
 }
 
 dependencies {
-    implementation 'com.graphql-java:graphql-java:11.0'
-    implementation 'com.graphql-java:graphql-java-spring-boot-starter-webmvc:1.0'
-    implementation 'com.google.guava:guava:26.0-jre'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.postgresql:postgresql:42.2.15'
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.graphql-java:graphql-spring-boot-starter:5.0.2'
+    implementation 'com.graphql-java:graphql-java-tools:5.2.4'
 
     compileOnly "org.projectlombok:lombok:1.18.16"
     annotationProcessor "org.projectlombok:lombok:1.18.16"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
 }

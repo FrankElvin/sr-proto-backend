@@ -1,0 +1,14 @@
+schema {
+    query: Query
+}
+
+type Query {
+	# Fetch all reports
+    getAllReports:[CompanyReport]
+}
+
+type CompanyReport {
+    reportId: ID!,
+    companyName: String,
+    companyBalance: Float
+}
