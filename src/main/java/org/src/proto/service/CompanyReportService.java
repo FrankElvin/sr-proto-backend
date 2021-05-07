@@ -7,6 +7,7 @@ import org.src.proto.model.CompanyReport;
 import org.src.proto.repository.CompanyReportRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CompanyReportService implements GraphQLQueryResolver {
@@ -16,6 +17,11 @@ public class CompanyReportService implements GraphQLQueryResolver {
 
     public List<CompanyReport> getAllReports() {
         return reportRepository.findAll();
+    }
+
+    public CompanyReport getReport(Long reportId) {
+        Optional<CompanyReport> tryReport = reportRepository.findById(reportId);
+        return tryReport.orElse(null);
     }
 
 }

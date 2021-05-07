@@ -5,6 +5,8 @@ schema {
 type Query {
 	# Fetch all reports
     getAllReports:[CompanyReport]
+    # Fetch one report
+    report(reportId: ID!): CompanyReport
 }
 
 type CompanyReport {
